@@ -16,20 +16,20 @@ public class SayaTubeVideo {
         this.playCount = 0;
     }
 
-//    public void increasePlayCount(int i){
-//        if(i > 25000000 || i < 0){
-//            throw new IllegalArgumentException("Penambahan View maksimal 25.000.000 dan tidak boleh negatif");
-//        }
-//        try {
-//            int x = this.playCount + i;
-//            if(x < 0){
-//                throw new Exception("Max Integer value reached!");
-//            }
-//            this.playCount += i;
-//        } catch (Exception e) {
-//            System.out.println("Gagal menambahkan view "+e);
-//        }
-//    }
+    public void increasePlayCount(int i){
+        if(i > 25000000 || i < 0){
+            throw new IllegalArgumentException("Penambahan View maksimal 25.000.000 dan tidak boleh negatif");
+        }
+        try {
+            int x = this.playCount + i;
+            if(x < 0){
+                throw new Exception("Max Integer value reached!");
+            }
+            this.playCount += i;
+        } catch (Exception e) {
+            System.out.println("Gagal menambahkan view "+e);
+        }
+    }
 
     public void printVideoDetails(){
         System.out.printf("Title\t: %s\nId\t: %d\nViews\t: %d\n",this.title,this.id,this.playCount);

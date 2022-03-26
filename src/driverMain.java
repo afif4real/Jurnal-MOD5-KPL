@@ -36,5 +36,26 @@ public class driverMain {
 
         user1.printAllVideoPlaycount();
         System.out.println("Total playcount : "+user1.getTotalVideoPlayCount());
+
+        for(int i = 0; i<85;i++){
+            vid1.increasePlayCount(25000000);
+        }
+        System.out.println("Total playcount : "+user1.getTotalVideoPlayCount());
+        try {
+            SayaTubeVideo vid11 = new SayaTubeVideo("");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        try {
+            SayaTubeUser vid11 = new SayaTubeUser("");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        try {
+            SayaTubeVideo vid11 = new SayaTubeVideo("a");
+            vid11.increasePlayCount(-5);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
